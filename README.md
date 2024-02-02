@@ -57,7 +57,7 @@ alter coloum coloum_name datatype; // change the datatype of the existing coloum
 select*from the table_name ;
 --distinct   ----   select distinct coloum_name from tablr_name ;
 
-//where 
+//where - condition with select 
 select coloum_name1 , coloum_name2 from table_name 
 where condition = ;
 
@@ -68,3 +68,62 @@ where department = 'iT' AND salary > 5000000 ;
 select coloum_name from table_name 
 order by coloum_name ASC/DESC ;
 //LIMIT SELECT* FROM TABLE_NAME LIMIY = 5 // TOP 5 ROWS CAN BE SHOWN
+
+//string 
+select upper(coloum_name) from table_name 
+replace upper with lower() , length()  , watch 8th
+//Group BY - aggregate count() , sum() , svg() , max() , min() , round()
+select sount(coloum_name) from table_name //total no. of rows
+
+group by coloum_name(S) 
+from table_name 
+group by coloum_name(s) ;
+
+select mode , sum(amount) as new
+from customer
+group by mode   -- jo select statement me aata h wo same coloum geoup by me v aayega 
+order by total ASC  
+
+//HAVING - it is use when u wanyt ti apply condition in group by.
+
+select coloum_names 
+from table_name 
+wgere conditions 
+group by coloum_names 
+having conditions
+
+select mode , count(amount) as new
+from customer
+group by mode  
+having count(amount) >= 3
+order by tottal dec
+
+--- order is : Select, From, Where, Group By, Having, Order By, Limit.
+
+//timestamp - 
+time - HH:MI:SS
+date - YYYY-MM-DD
+year - YYYY OR YY
+timestamp - YYYY-MM-DD HH:MI:SS
+timestamptz - TIME AND TIME ZONE 
+
+SHOW TIMEZONR -- 
+SELECT NOW()  -- YYYY-MM-DD HH:MI:SS
+SELECT TIMEOFDAY() -- DAY MONTH DATE HH:MI:SS
+SELECT CURRENT_TIME()
+SELECT CURRENT_DATE()
+
+//EXTRACT 
+SELECT EXTRACT(month from date_coloum) as coloum_name from table_name
+   SELECT EXTRACT(month from payement_date) as payment_month from customer
+    replace month with DOW  , ct coloum_name(S)
+   from tableA
+   INNER JOIN  tableB 
+   ON tableA.col_name = tableB.col_name 
+
+    select c.col , p.col1 , p.col2
+   from customer as c
+   INNER JOIN  payment as p 
+   ON c.customer_id = p.customer_id
+
+   gull join add all the coloum 
