@@ -126,4 +126,11 @@ SELECT EXTRACT(month from date_coloum) as coloum_name from table_name
    INNER JOIN  payment as p 
    ON c.customer_id = p.customer_id
 
-   gull join add all the coloum 
+//subquerry 
+
+select *from payment 
+where salary > (selecta avg(amouny) from payment )
+
+-- if u habe two  table the to applu subquerry 
+
+select 
